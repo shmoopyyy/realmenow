@@ -1,0 +1,36 @@
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #correct {
+    display: none
+  }
+</style>
+<body>
+  <form id="pswdform">
+    <input type="text" id="pswd">
+    <button type="button" onclick="check()">
+      Submit
+    </button>
+  </form>
+  <div id="correct">
+    meow
+  </div>
+  
+  <script>
+    function check() {
+      let response = document.getElementById("validate")
+      let correctR = "Rex Orange County"
+      if (response === correctR) {
+        document.getElementById("pswdform").style.display = "none"
+        document.getElementById("correct").style.display = "block"
+      } else {
+        alert("Incorrect password")
+      }
+    }
+  </script>
+</body>
