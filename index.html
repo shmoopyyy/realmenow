@@ -4,6 +4,21 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: black;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 10vh;
+    color: white;
+  }
+  
+  div {
+    background-color: #edcec5;
+  }
+  
+  p {
+    margin: 20px;
   }
   
   #correct {
@@ -11,6 +26,9 @@
   }
 </style>
 <body>
+  <h1>
+    Do you know the real me?
+  </h1>
   <form id="pswdform">
     <input type="text" id="pswd">
     <button type="button" onclick="check()">
@@ -18,13 +36,23 @@
     </button>
   </form>
   <div id="correct">
-    meow
+    <p>
+      Diary entry: Wednesday, November 20<br></br><br></br>
+
+…
+<br></br><br></br>
+I don’t know why I keep updating this website. Maybe it’s the same reason I keep updating that stupid profile—because I’m hoping somebody will see it. 
+<br></br><br></br>
+I’m going on a date today. I know, an actual date. I thought that if I act like someone else, it won’t be as scary, or as real. And if I get rejected, then it’s not because they didn’t like me, but because they didn’t like this fake off-putting persona. But I kind of hate it. I wish I was ready to be myself in front of another person, that I could be softer and romantic and talk about Carly Rae Jepsen (I put her on my concert list hoping someone would notice it was off). It feels like a distant dream, but maybe it’s possible for me. I really want it to be. 
+<br></br><br></br>
+I wonder if anyone will ever find this. I don’t know. If you did, and you’re reading this, can I be the real me around you?
+    </p>
   </div>
   
   <script>
     function check() {
-      let response = document.getElementById("validate")
-      let correctR = "Rex Orange County"
+      let response = document.getElementById("pswd").value
+      let correctR = "mewithoutyou"
       if (response === correctR) {
         document.getElementById("pswdform").style.display = "none"
         document.getElementById("correct").style.display = "block"
